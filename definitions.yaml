@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hacker-company
+  namespace: hacker-company
+  labels:
+    name: hacker-company
+spec:
+  containers:
+  - name: ping
+    image: busybox
+    command: ["bin.sh ping google.com"]
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
