@@ -37,5 +37,6 @@ package { $packages:
 package { bottle:
   ensure   => '0.10.11',
   provider => 'pip3',
+  require  => Package['libapache2-mod-wsgi']
 }
 # python3 -m bottle --version
