@@ -1,10 +1,35 @@
-from urllib.request import urlopen
-import re as r
+print("Hello World")
 
-def getIP():
-	d = str(urlopen('http://checkip.dyndns.com/')
-			.read())
+print("Hello Amazing", end=" ")
+print("World")
 
-	return r.compile(r'Address: (\d+\.\d+\.\d+\.\d+)').search(d).group(1)
+print("Add then subtract two numbers.")
+x = int(input())
+y = int(input())
+print(x + y)
+print(x - y)
 
-print(getIP())
+print("Is this number even?")
+x = int(input())
+if x % 2 == 0:
+    print("yay")
+else:
+    print("nay")
+
+n = x
+for i in range(n+1):
+	print(i)
+
+class doesNothing:
+	pass
+
+#String to list
+yourString =  "2 0 1 7 22 2"
+
+def stringToList(string):
+	myList = list(yourString.split(" "))
+	return myList
+
+print(stringToList(yourString))
+
+print(sorted(set(stringToList(yourString))))
